@@ -54,13 +54,8 @@ class _MobileOverlay extends StatelessWidget {
         Align(
           alignment: Alignment.topCenter,
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Expanded(
-                child: IgnorePointer(
-                  child: podCtr.videoTitle ?? const SizedBox(),
-                ),
-              ),
               MaterialIconButton(
                 toolTipMesg: podCtr.podPlayerLabels.settings,
                 color: itemColor,
@@ -75,6 +70,12 @@ class _MobileOverlay extends StatelessWidget {
                   Icons.more_vert_rounded,
                 ),
               ),
+              Expanded(
+                child: IgnorePointer(
+                  child: podCtr.videoTitle ?? const SizedBox(),
+                ),
+              ),
+             
             ],
           ),
         ),
